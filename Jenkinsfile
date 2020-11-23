@@ -15,7 +15,7 @@ pipeline {
           echo "Propertyfiles entered: ${propertyFile}"
 		  // sh "cd /tmp"
 		 // sh "echo '${propertyFile}' > propertyFile-$BUILD_NUMBER.js"
-		  sh "cd /tmp && echo ${propertyFile} > propertyFile-$BUILD_NUMBER.js && ansible-playbook -i hosts.ini test.yml --extra-vars 'count=${numContainers} build=$BUILD_NUMBER state=${reportState}'"
+		  sh "cd /tmp && echo '${propertyFile}' > propertyFile-$BUILD_NUMBER.js && ansible-playbook -i hosts.ini test.yml --extra-vars 'count=${numContainers} build=$BUILD_NUMBER state=${reportState}'"
         }
       }
     }
