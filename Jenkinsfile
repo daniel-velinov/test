@@ -3,7 +3,7 @@ pipeline {
   parameters {
     choice(name: 'numContainers', choices: ['1', '2', '3', '4', '5'], description: 'Enter number of containers needed')
     choice(name: 'reportState', choices: ['new', 'update'], description: 'Enter whether new or update report')
-    choice(name: 'propertyFile', string: 'sample text ', description: 'Enter the properties file as raw text')
+	string(name: 'propertyFile', defaultValue: 'default', description: 'Enter Propertyfiles as raw text')
   }
 
  stages {
