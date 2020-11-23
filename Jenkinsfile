@@ -13,6 +13,7 @@ pipeline {
           echo "Selected number of containers: ${numContainers}"
           echo "Report selected: ${reportState}"
           echo "Propertyfiles entered: ${propertyFile}"
+		  sh "cd /tmp && ansible-playbook -i hosts.ini test.yml --extra-vars 'count=${numContainers} build=$BUILD_NUMBER state=${reportState} propertyfile_data=${propertyFile}'"
         }
       }
     }
