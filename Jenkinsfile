@@ -15,7 +15,6 @@ pipeline {
           sh '''
 	      cat <<EOF > /tmp/propertyFile.js 
 	      ${propertyFile}
-	      EOF
 	      '''
 	      
 	      
