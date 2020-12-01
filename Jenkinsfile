@@ -11,7 +11,10 @@ pipeline {
       script {
           echo "Selected number of containers: ${numContainers}"
           echo "Report selected: ${reportState}"
-          sh "cat <<EOF > /tmp/propertyFile.js ${propertyFile} EOF"
+	  echo "Propertyfile data: ${propertyFile}"
+          sh "cat <<EOF > /tmp/propertyFile.js 
+	      ${propertyFile}
+	      EOF"
 	      
 	      
 	      //echo ${propertyFile} > /tmp/propertyFile.js
