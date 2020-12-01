@@ -15,6 +15,7 @@ pipeline {
           sh '''cat <<EOF > propertyFile.js 
 ${propertyFile}
 	      '''
+	  sh "cp propertyFile.js /tmp"
 	      
 	      
 	      //echo ${propertyFile} > /tmp/propertyFile.js
