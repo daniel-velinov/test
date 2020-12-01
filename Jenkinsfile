@@ -5,7 +5,7 @@ pipeline {
     choice(name: 'reportState', choices: ['new', 'update'], description: 'Enter whether new or update report')
 	text(name: 'propertyFile', defaultValue: '', description: 'Enter Propertyfiles as raw text')
   }
-
+ stages {
   stage('Run cypress containers on Dione') {
     steps {
       script {
@@ -20,3 +20,4 @@ pipeline {
       }
     }
   }
+}
