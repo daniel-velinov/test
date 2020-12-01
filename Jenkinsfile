@@ -2,7 +2,7 @@ pipeline {
   environment {
     DOCKER_REGISTRY = "repository-docker-push.braingroup.ch"
 	DOCKER_REGISTRY_PULL = "repository-docker.braingroup.ch"
-	CONTAINER_NAME = "cypressomnium-$BRANCH_NAME.toLowerCase()"
+	CONTAINER_NAME = "cypressomnium-$BRANCH_NAME".toLowerCase()
 	DOCKER_CREDENTIAL = 'docker-nexus-registry'
   }
   agent { label 'master'}
