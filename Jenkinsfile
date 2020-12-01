@@ -23,7 +23,7 @@ pipeline {
 	      echo "$BRANCH_VALID"
 	      echo "$CONTAINER_NAME"
 	      
-          sh '''cat <<EOF > propertyFile.js 
+          sh '''cat <<EOF > propertyFile-$BRANCH_VALID.js 
 ${propertyFile}
 	      '''
 	  sh "cp propertyFile.js /tmp"
