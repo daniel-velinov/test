@@ -24,7 +24,6 @@ pipeline {
 	text(name: 'propertyFile', defaultValue: '', description: 'Enter Propertyfiles as raw text')
   }
 
- stages {
   stage('Run cypress containers on Dione') {
     steps {
       script {
