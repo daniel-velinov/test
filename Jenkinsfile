@@ -1,9 +1,9 @@
 pipeline {
   environment {
-    BRANCH_VALID = "$BRANCH_NAME".toLowerCase().replaceAll('\/)','-')
+    BRANCH_VALID = "$BRANCH_NAME".replaceAll('\/','-')
     DOCKER_REGISTRY = "repository-docker-push.braingroup.ch"
     DOCKER_REGISTRY_PULL = "repository-docker.braingroup.ch"
-    CONTAINER_NAME = "cypressomnium-$BRANCH_VALID"
+    CONTAINER_NAME = "cypressomnium-$BRANCH_VALID".toLowerCase()
     DOCKER_CREDENTIAL = 'docker-nexus-registry'
   }
 	
