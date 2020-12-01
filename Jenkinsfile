@@ -23,16 +23,10 @@ pipeline {
 	      echo "$BRANCH_VALID"
 	      echo "$CONTAINER_NAME"
 	      
-          sh '''cat <<EOF > propertyFile-$BRANCH_VALID.js 
+          sh '''cat <<EOF > /tmp/propertyFile-$BRANCH_VALID.js 
 ${propertyFile}
-	      '''
-	  sh "cp propertyFile.js /tmp"
-	      
-	      
-	      //echo ${propertyFile} > /tmp/propertyFile.js
-		//  sh "echo '${propertyFile}' > propertyFile-$BUILD_NUMBER.js"
-		 // sh "echo '${propertyFile}' > propertyFile-$BUILD_NUMBER.js"
-		  // sh "cd /tmp && ansible-playbook -i hosts.ini test.yml --extra-vars 'count=${numContainers} build=$BUILD_NUMBER state=${reportState}'"
+	      '''	      
+	      		  // sh "cd /tmp && ansible-playbook -i hosts.ini test.yml --extra-vars 'count=${numContainers} build=$BUILD_NUMBER state=${reportState}'"
         }
       }
     }
